@@ -1,0 +1,11 @@
+{
+  "agent": "research_agent",
+  "status": "complete",
+  "results": [
+    "LangChain",
+    "CrewAI",
+    "LangGraph"
+  ],
+  "score": 95,
+  "verified": true
+}

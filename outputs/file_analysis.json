@@ -1,0 +1,17 @@
+[
+  {
+    "file": "future.txt",
+    "words": 17,
+    "preview": "By 2027 agents will be infrastructure. The companies that win will own the workflow not the model."
+  },
+  {
+    "file": "intro.txt",
+    "words": 16,
+    "preview": "AI agents are autonomous systems that perceive and act. They use LLMs as their reasoning engine."
+  },
+  {
+    "file": "frameworks.txt",
+    "words": 14,
+    "preview": "LangChain LangGraph CrewAI AutoGen are the major frameworks for building agents in Python today."
+  }
+]
