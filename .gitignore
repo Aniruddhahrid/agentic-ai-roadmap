@@ -1,11 +1,67 @@
+# ==========================================
+# PYTHON
+# ==========================================
+
+# Virtual environment — never commit
 .venv/
-.env
+venv/
+env/
+
+# Python bytecode
 __pycache__/
+*.py[cod]
+*$py.class
 *.pyc
-*.pyo
-.DS_Store
-.vscode/
-.idea/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ==========================================
+# SECRETS — CRITICAL
+# ==========================================
+
+# Environment variables — API keys live here
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# AI / AGENT SPECIFIC
+# ==========================================
+
+# Generated outputs — not source code
 outputs/
 research_results/
 sample_texts/
+
+# LangSmith / LangChain cache
+.langchain/
+
+# Vector DB local storage (week 9-10)
+chroma_db/
+*.db
+
+# ==========================================
+# TOOLS
+# ==========================================
+
+# VS Code settings (optional — some teams commit this)
+.vscode/
+
+# Mac junk
+.DS_Store
+
+# Windows junk
+Thumbs.db
+desktop.ini
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# ==========================================
+# DOCKER (week 11)
+# ==========================================
+*.env.docker
