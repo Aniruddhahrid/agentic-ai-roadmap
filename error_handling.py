@@ -379,3 +379,28 @@ print("\nExtracting review with fallback chain:")
 review = extract_review_with_fallback(review_text)
 if review:
     print(f"Got result: {review.model_dump()}")
+
+
+
+
+## The Error Handling Mental Model
+# ```
+# LLM call fails (network/timeout)
+#     → retry with exponential backoff
+#     → max 3 attempts
+#     → return None if all fail
+
+# JSON parse fails (bad model output)
+#     → retry (model might do better)
+#     → max 3 attempts
+#     → return None if all fail
+
+# Pydantic validation fails (wrong structure)
+#     → fail fast, don't retry
+#     → try simpler model (fallback)
+#     → return None if fallback fails
+
+# Never let errors crash the agent silently
+# Always log what failed and why
+# Always return None rather than raising exceptions to callers
+# ```
